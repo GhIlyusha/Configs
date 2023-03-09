@@ -118,7 +118,7 @@ require("lazy").setup({
         t.setup { extensions = { file_browser = { disable_devicons = true } } }
         t.load_extension "file_browser"
     end },
-    { "rhysd/conflict-marker.vim" },
+    { "akinsho/git-conflict.nvim", config = function() require("git-conflict").setup() end },
     { "tpope/vim-surround" },
     { "vim-scripts/ReplaceWithRegister" },
     { "numToStr/Comment.nvim", config = function() require("Comment").setup() end },
@@ -133,7 +133,7 @@ require("lazy").setup({
                 lualine_b = {
                     "branch",
                     "diff",
-                    { "diagnostics", symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' } }
+                    { "diagnostics", symbols = { error = "E", warn = "W", info = "I", hint = "H" } }
                 },
                 lualine_c = { "filename" },
                 lualine_x = { "encoding", { "fileformat", symbols = { unix = "LF", dos = "CRLF", mac = "CR" } }, "filetype" },
@@ -192,7 +192,7 @@ require("lazy").setup({
 
 -- autocmds
 local function autocommands(group_name, commands)
-    if type(commands) == 'string' then
+    if type(commands) == "string" then
         commands = { commands }
     end
     local group_id = vim.api.nvim_create_augroup(group_name, {})
@@ -201,11 +201,12 @@ local function autocommands(group_name, commands)
         vim.api.nvim_create_autocmd(unpack(command))
     end
 end
-autocommands('unfuck_indentation', {
-  { 'FileType', { pattern = '*', command = 'sil set smartindent' } },
-  { 'FileType', { pattern = 'swift', command = 'sil set cindent' } }
+autocommands("unfuck_indentation", {
+  { "FileType", { pattern = "*", command = "sil set smartindent" } },
+  { "FileType", { pattern = "swift", command = "sil set cindent" } }
 })
 
 -- misc
 vim.cmd("highlight! link CursorLineNr CursorLine")
 vim.cmd("cd ~/Work")
+
