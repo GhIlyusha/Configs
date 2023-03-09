@@ -90,7 +90,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- plugins
 require("lazy").setup({
-    { "nvim-lua/plenary.nvim" },
     { "nmac427/guess-indent.nvim", config = function() require("guess-indent").setup {} end },
     { "navarasu/onedark.nvim", config = function()
         local o = require("onedark")
@@ -106,12 +105,6 @@ require("lazy").setup({
         }
         vim.cmd(":sil :TSUpdate")
     end },
-    { "lukas-reineke/indent-blankline.nvim", config = function()
-        require("indent_blankline").setup {
-            show_current_context = true,
-            show_current_context_start = true,
-        }
-    end },
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope.nvim", tag = "0.1.1", dependencies = { "nvim-lua/plenary.nvim" }, config = function()
         local t = require("telescope")
@@ -121,27 +114,8 @@ require("lazy").setup({
     { "akinsho/git-conflict.nvim", config = function() require("git-conflict").setup() end },
     { "tpope/vim-surround" },
     { "vim-scripts/ReplaceWithRegister" },
+    { "phaazon/hop.nvim", config = function() require("hop").setup() end },
     { "numToStr/Comment.nvim", config = function() require("Comment").setup() end },
-    { "nvim-lualine/lualine.nvim", config = function ()
-        require("lualine").setup {
-            options = {
-                component_separators = { left = "", right = "" },
-                section_separators = { left = "", right = "" },
-            },
-            sections = {
-                lualine_a = { { "mode", color = { bg = "#c2c2c2", fg = "#000000" } } },
-                lualine_b = {
-                    "branch",
-                    "diff",
-                    { "diagnostics", symbols = { error = "E", warn = "W", info = "I", hint = "H" } }
-                },
-                lualine_c = { "filename" },
-                lualine_x = { "encoding", { "fileformat", symbols = { unix = "LF", dos = "CRLF", mac = "CR" } }, "filetype" },
-                lualine_y = { { "progress", separator = nil } },
-                lualine_z = { { "location", color = { bg = "#c2c2c2", fg = "#000000" } } }
-            }
-        }
-    end },
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-path" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -168,11 +142,9 @@ require("lazy").setup({
             }
         }
     end },
-    { "phaazon/hop.nvim", config = function() require("hop").setup() end },
     { "neovim/nvim-lspconfig", config = function()
         require("lspconfig")["rust_analyzer"].setup {}
     end },
-    { "j-hui/fidget.nvim", config = function() require("fidget").setup() end },
     { "simrat39/rust-tools.nvim", config = function()
         require("rust-tools").setup { inlay_hints = {
             auto = true,
@@ -186,7 +158,6 @@ require("lazy").setup({
             check_ts = true
         }
     end },
-    { "windwp/nvim-ts-autotag" },
     { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end }
 })
 
@@ -212,3 +183,4 @@ autocommands("trailing_whitespace", {
 -- misc
 vim.cmd("highlight! link CursorLineNr CursorLine")
 vim.cmd("cd ~/Work")
+
