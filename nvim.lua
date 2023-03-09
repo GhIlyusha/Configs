@@ -77,19 +77,19 @@ map("i", "<c-y>", "<c-o><c-y>")
 -- lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
+    vim.fn.system {
         "git",
         "clone",
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
         "--branch=stable",
         lazypath,
-    })
+    }
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- plugins
-require("lazy").setup({
+require("lazy").setup {
     { "nmac427/guess-indent.nvim", config = function() require("guess-indent").setup {} end },
     { "navarasu/onedark.nvim", config = function()
         local o = require("onedark")
@@ -159,7 +159,7 @@ require("lazy").setup({
         }
     end },
     { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end }
-})
+}
 
 -- autocmds
 local function autocommands(group_name, commands)
