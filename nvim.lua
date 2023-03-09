@@ -92,7 +92,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { "nvim-lua/plenary.nvim" },
     { "nmac427/guess-indent.nvim", config = function() require("guess-indent").setup {} end },
-    { "navarasu/onedark.nvim", config = function() 
+    { "navarasu/onedark.nvim", config = function()
         local o = require("onedark")
         o.setup { style = "light" }
         o.load()
@@ -173,7 +173,7 @@ require("lazy").setup({
         require("lspconfig")["rust_analyzer"].setup {}
     end },
     { "j-hui/fidget.nvim", config = function() require("fidget").setup() end },
-    { "simrat39/rust-tools.nvim", config = function() 
+    { "simrat39/rust-tools.nvim", config = function()
         require("rust-tools").setup { inlay_hints = {
             auto = true,
             show_parameter_hints = false,
@@ -202,11 +202,13 @@ local function autocommands(group_name, commands)
     end
 end
 autocommands("unfuck_indentation", {
-  { "FileType", { pattern = "*", command = "sil set smartindent" } },
-  { "FileType", { pattern = "swift", command = "sil set cindent" } }
+    { "FileType", { pattern = "*", command = "sil set smartindent" } },
+    { "FileType", { pattern = "swift", command = "sil set cindent" } }
+})
+autocommands("trailing_whitespace", {
+    { "BufWritePre", { pattern = "*", command = [[%s/[^\s]\zs\s\+$//e]] }}
 })
 
 -- misc
 vim.cmd("highlight! link CursorLineNr CursorLine")
 vim.cmd("cd ~/Work")
-
