@@ -1,0 +1,16 @@
+theme = "onelight"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+git-ignore = false
+
+[editor.indent-guides]
+render = true
