@@ -98,6 +98,12 @@ require("lazy").setup({
         o.load()
     end },
     { "nvim-treesitter/nvim-treesitter", config = function()
+        require("nvim-treesitter.configs").setup {
+            ensure_installed = { "lua", "vim", "rust", "swift", "typescript", "javascript" },
+            sync_install = true,
+            auto_install = true,
+            indent = { enable = true }
+        }
         vim.cmd(":sil :TSUpdate")
     end },
     { "lukas-reineke/indent-blankline.nvim", config = function()
@@ -124,7 +130,11 @@ require("lazy").setup({
             },
             sections = {
                 lualine_a = { { "mode", color = { bg = "#c2c2c2" } } },
-                lualine_b = { "branch", "diff", "diagnostics" },
+                lualine_b = {
+                    "branch",
+                    "diff",
+                    { "diagnostics", symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' } }
+                },
                 lualine_c = { "filename" },
                 lualine_x = { "encoding", { "fileformat", symbols = { unix = "LF", dos = "CRLF", mac = "CR" } }, "filetype" },
                 lualine_y = { { "progress", separator = nil } },
@@ -178,6 +188,22 @@ require("lazy").setup({
     end },
     { "windwp/nvim-ts-autotag" },
     { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end }
+})
+
+-- autocmds
+local function autocommands(group_name, commands)
+    if type(commands) == 'string' then
+        commands = { commands }
+    end
+    local group_id = vim.api.nvim_create_augroup(group_name, {})
+    for _, command in ipairs(commands) do
+        command[2].group = group_id
+        vim.api.nvim_create_autocmd(unpack(command))
+    end
+end
+autocommands('unfuck_indentation', {
+  { 'FileType', { pattern = '*', command = 'sil set smartindent' } },
+  { 'FileType', { pattern = 'swift', command = 'sil set cindent' } }
 })
 
 -- misc
