@@ -31,7 +31,7 @@ local function map(modes, lhs, rhs, opts)
     modes = {modes}
   end
   for _, mode in ipairs(modes) do
-    vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+    vim.keymap.set(mode, lhs, rhs, opts)
   end
 end
 vim.g.mapleader = " "
