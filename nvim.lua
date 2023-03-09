@@ -202,8 +202,8 @@ local function autocommands(group_name, commands)
     end
 end
 autocommands("unfuck_indentation", {
-    { "FileType", { pattern = "*", command = "sil set smartindent" } },
-    { "FileType", { pattern = "swift", command = "sil set cindent" } }
+    { "Syntax", { pattern = "*", command = "sil set smartindent" } },
+    { "Syntax", { pattern = "swift", command = "sil set cindent" } }
 })
 autocommands("trailing_whitespace", {
     { "BufWritePre", { pattern = "*", command = [[%s/[^\s]\zs\s\+$//e]] }}
