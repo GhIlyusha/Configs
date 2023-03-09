@@ -14,3 +14,19 @@ git-ignore = false
 
 [editor.indent-guides]
 render = true
+
+[keys.normal]
+"^" = "goto_line_start"
+"$" = "goto_line_end"
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+
+[keys.select]
+"^" = "extend_to_line_start"
+"$" = "extend_to_line_end"
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
