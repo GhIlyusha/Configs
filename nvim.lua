@@ -183,4 +183,3 @@ autocommands("trailing_whitespace", {
 -- misc
 vim.cmd("highlight! link CursorLineNr CursorLine")
 vim.cmd("cd ~/Work")
-
