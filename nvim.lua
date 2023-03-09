@@ -129,7 +129,7 @@ require("lazy").setup({
                 section_separators = { left = "", right = "" },
             },
             sections = {
-                lualine_a = { { "mode", color = { bg = "#c2c2c2" } } },
+                lualine_a = { { "mode", color = { bg = "#c2c2c2", fg = "#000000" } } },
                 lualine_b = {
                     "branch",
                     "diff",
@@ -138,7 +138,7 @@ require("lazy").setup({
                 lualine_c = { "filename" },
                 lualine_x = { "encoding", { "fileformat", symbols = { unix = "LF", dos = "CRLF", mac = "CR" } }, "filetype" },
                 lualine_y = { { "progress", separator = nil } },
-                lualine_z = { { "location", color = { bg = "#c2c2c2" } } }
+                lualine_z = { { "location", color = { bg = "#c2c2c2", fg = "#000000" } } }
             }
         }
     end },
