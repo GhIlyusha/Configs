@@ -73,6 +73,10 @@ map("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format { async = true }<cr>")
 map("i", "<c-`>", "<esc>")
 map("i", "<c-e>", "<c-o><c-e>")
 map("i", "<c-y>", "<c-o><c-y>")
+map({ "i", "n", "v" }, "<up>",    "<nop>") -- i'm a noob
+map({ "i", "n", "v" }, "<down>",  "<nop>")
+map({ "i", "n", "v" }, "<left>",  "<nop>")
+map({ "i", "n", "v" }, "<right>", "<nop>")
 
 -- lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
