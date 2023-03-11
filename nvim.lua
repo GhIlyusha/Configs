@@ -188,6 +188,10 @@ autocommands("unfuck_indentation", {
 autocommands("trailing_whitespace", {
     { "BufWritePre", { pattern = "*", command = [[%s/[^\s]\zs\s\+$//e]] }}
 })
+autocommands("absolute_numbers_in_normal_mode", {
+    { "InsertEnter", { pattern = "*", command = "sil set norelativenumber" }},
+    { "InsertLeave", { pattern = "*", command = "sil set relativenumber" }}
+})
 
 -- misc
 vim.cmd("highlight! link CursorLineNr CursorLine")
