@@ -1,0 +1,41 @@
+{
+    // tracking
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "manual",
+    "update.showReleaseNotes": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+
+    // visuals
+    "workbench.colorTheme": "Moegi Light",
+    "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.layoutControl.enabled": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "none",
+    "editor.inlayHints.enabled": "off",
+    "rust-analyzer.lens.enable": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+
+    // vim
+    "editor.lineNumbers": "relative",
+    "vim.smartRelativeLine": true,
+    "vim.easymotion": true,
+    "vim.replaceWithRegister": true,
+    "vim.leader": " ",
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+
+    // syntax
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "*.mutable": {
+                "underline": false
+            }
+        }
+    }
+}
