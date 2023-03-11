@@ -162,7 +162,12 @@ require("lazy").setup {
             check_ts = true
         }
     end },
-    { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end }
+    { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end },
+    { "folke/which-key.nvim", config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup {} 
+    end }
 }
 
 -- autocmds
