@@ -25,3 +25,6 @@ format = "[$number $symbol]($style)"
 [git_branch]
 symbol = "branch "
 ignore_branches = ["main", "master"]
+
+[directory]
+truncation_length = 10
