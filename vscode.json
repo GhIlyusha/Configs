@@ -19,6 +19,7 @@
     "editor.inlayHints.enabled": "off",
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
+    "editor.stickyScroll.enabled": true,
 
     // vim
     "editor.lineNumbers": "relative",
