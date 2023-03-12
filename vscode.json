@@ -7,7 +7,7 @@
     "extensions.autoUpdate": false,
     "security.workspace.trust.enabled": false,
     "git.openRepositoryInParentFolders": "never",
-    
+
     // visuals
     "workbench.colorTheme": "Moegi Black",
     "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
@@ -22,6 +22,10 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
     "editor.stickyScroll.enabled": true,
+
+    // behavior
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
 
     // vim
     "editor.lineNumbers": "relative",
