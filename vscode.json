@@ -9,6 +9,8 @@
     "git.openRepositoryInParentFolders": "never",
     
     // visuals
+    "workbench.colorTheme": "Default Light+ Experimental",
+    "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": false,
