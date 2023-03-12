@@ -7,7 +7,7 @@
     "extensions.autoUpdate": false,
 
     // visuals
-    "workbench.colorTheme": "Moegi Light",
+    "workbench.colorTheme": "Moegi Black",
     "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
     "workbench.layoutControl.enabled": false,
     "editor.minimap.enabled": false,
