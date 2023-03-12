@@ -18,7 +18,6 @@
     "workbench.editor.untitled.hint": "hidden",
     "workbench.startupEditor": "none",
     "editor.inlayHints.enabled": "off",
-    "rust-analyzer.lens.enable": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
 
