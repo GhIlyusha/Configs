@@ -95,10 +95,8 @@ vim.opt.rtp:prepend(lazypath)
 -- plugins
 require("lazy").setup {
     { "nmac427/guess-indent.nvim", config = function() require("guess-indent").setup {} end },
-    { "navarasu/onedark.nvim", config = function()
-        local o = require("onedark")
-        o.setup { style = "light" }
-        o.load()
+    { "RRethy/nvim-base16", config = function()
+        vim.cmd("colorscheme base16-3024")
     end },
     { "nvim-treesitter/nvim-treesitter", config = function()
         require("nvim-treesitter.configs").setup {
@@ -166,7 +164,7 @@ require("lazy").setup {
     { "folke/which-key.nvim", config = function()
         vim.o.timeout = true
         vim.o.timeoutlen = 300
-        require("which-key").setup {} 
+        require("which-key").setup {}
     end }
 }
 
