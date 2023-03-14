@@ -96,7 +96,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup {
     { "nmac427/guess-indent.nvim", config = function() require("guess-indent").setup {} end },
     { "RRethy/nvim-base16", config = function()
-        vim.cmd("colorscheme base16-3024")
+        vim.cmd("colorscheme base16-one-light")
     end },
     { "nvim-treesitter/nvim-treesitter", config = function()
         require("nvim-treesitter.configs").setup {
