@@ -6,11 +6,11 @@
     "extensions.autoCheckUpdates": false,
     "extensions.autoUpdate": false,
     "security.workspace.trust.enabled": false,
-    "git.openRepositoryInParentFolders": "never",
 
     // visuals
     "workbench.colorTheme": "Moegi Light",
-    "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'PragmataPro Mono', 'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.bracketPairColorization.enabled": false,
@@ -26,6 +26,7 @@
     // behavior
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "git.openRepositoryInParentFolders": "never",
 
     // vim
     "editor.lineNumbers": "relative",
