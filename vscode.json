@@ -9,7 +9,7 @@
     "git.openRepositoryInParentFolders": "never",
 
     // visuals
-    "workbench.colorTheme": "Moegi Black",
+    "workbench.colorTheme": "Moegi Light",
     "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
